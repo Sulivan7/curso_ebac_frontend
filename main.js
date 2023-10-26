@@ -3,8 +3,8 @@ document
   .addEventListener("submit", function (event) {
     event.preventDefault();
 
-    const campoA = document.getElementById("campo-a").value;
-    const campoB = document.getElementById("campo-b").value;
+    const campoA = Number(document.getElementById("campo-a").value);
+    const campoB = Number(document.getElementById("campo-b").value);
 
     if (campoB > campoA) {
       document.getElementById("mensagem").textContent =
