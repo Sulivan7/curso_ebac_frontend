@@ -8,12 +8,12 @@ document
 
     if (campoB > campoA) {
       document.getElementById("mensagem").textContent =
-        "Sucesso Campo B e Maior que Campo A";
+        "Sucesso! Campo B Maior que Campo A";
       document.getElementById("mensagem").style.color = "green";
       document.getElementById("mensagem").style.display = "flex";
     } else {
       document.getElementById("mensagem").textContent =
-        "Erro Campo B deve ser Maior que Campo A";
+        "Erro! Campo B Menor que Campo A";
       document.getElementById("mensagem").style.color = "red";
       document.getElementById("mensagem").style.display = "flex";
     }
