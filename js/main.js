@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    $('#telefone').mask('00-00000-0000', { placeholder: '00-00000-0000' });
+    $('#tel').mask('(00) 00000-0000', { placeholder: '(00) 00000-0000' });
 
     $('form').validate({
         rules: {
@@ -10,14 +10,17 @@ $(document).ready(function () {
                 required: true,
                 email: true,
             },
-            telefone: {
+            tel: {
                 required: true,
             },
         },
         messages: {
             nome: 'Digite o seu nome',
             email: 'Digite seu E-mail',
-            telefone: 'Digite seu Telefone',
+            tel: 'Digite seu Telefone',
+        },
+        submitHandler: function (form) {
+            alert('Você se cadastrou com sucesso!');
         },
     });
 });
