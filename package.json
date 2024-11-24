@@ -1,15 +1,24 @@
 {
   "name": "curso_ebac_frontend",
   "version": "1.0.0",
-  "description": "��#\u0000 \u0000c\u0000u\u0000r\u0000s\u0000o\u0000_\u0000e\u0000b\u0000a\u0000c\u0000_\u0000f\u0000r\u0000o\u0000n\u0000t\u0000e\u0000n\u0000d\u0000\r\u0000 \u0000\r\u0000 \u0000#\u0000#\u0000 \u0000O\u0000s\u0000 \u0000E\u0000x\u0000e\u0000r\u0000c\u0000�\u0000c\u0000i\u0000o\u0000s\u0000 \u0000e\u0000s\u0000t\u0000�\u0000o\u0000 \u0000o\u0000r\u0000g\u0000a\u0000n\u0000i\u0000z\u0000a\u0000d\u0000o\u0000s\u0000 \u0000p\u0000e\u0000l\u0000a\u0000s\u0000 \u0000b\u0000r\u0000a\u0000n\u0000c\u0000h\u0000.\u0000\r\u0000 \u0000",
-  "main": "index.js",
+  "main": "gulpfile.js",
   "scripts": {
-    "sass": "sass source/main.scss build/main.css --watch",
+    "gulp": "gulp",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "node": "^20.18.1"
+  },
   "devDependencies": {
+    "gulp": "^5.0.0",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-obfuscate": "^0.2.9",
+    "gulp-sass": "^5.1.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "gulp-uglify": "^3.0.2",
     "sass": "^1.81.0"
   }
 }
