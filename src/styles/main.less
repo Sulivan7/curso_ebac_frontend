@@ -1,0 +1,105 @@
+@colorPrincipal: #e7e7e7;
+@colorSecundaria: #fff;
+@colorTerceria: #000;
+@colorBtn: #009432;
+@colorTransp: rgba(0, 0, 0, 0.1);
+@colorReprovado: red;
+@fontePrincipal: Roboto, sans-serif;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: @fontePrincipal;
+}
+
+body {
+    background-color: @colorPrincipal;
+    padding-top: 100px;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+
+    & img {
+        height: 36px;
+        margin-right: 16px;
+    }
+
+    & h1 {
+        font-size: 40px;
+        font-weight: bold;
+    }
+}
+
+.container {
+    max-width: 960px;
+    width: 100%;
+    margin: 0 auto;
+} 
+
+form {
+    display: flex;
+    max-width: 640px;
+    width: 100%;
+    justify-content: space-between;
+    margin-bottom: 56px;
+
+    & input {
+        font-size: 24px;
+        background-color: @colorSecundaria;
+        border: none;
+        border-bottom: 2px solid @colorTerceria;
+        padding: 8px;
+    }
+
+    & button {
+        background-color: @colorBtn;
+        color: @colorSecundaria;
+        font-size: 24px;
+        font-weight: bold;
+        border: none;
+        cursor: pointer;
+        padding: 8px;
+    }
+}
+
+table {
+    width: 100%;
+
+    & th {
+        border-bottom: 2px solid @colorTerceria;
+        padding: 16px;
+        font-size: 24px;
+        font-weight: bold;
+    }
+
+    & td {
+        text-align: center;
+        font-size: 18px;
+        padding: 16px 0;
+        border-bottom: 1px solid @colorTransp;
+
+        & img {
+        height: 30px;
+        }
+    }
+}
+
+.resultado {
+    padding: 8px;
+    font-weight: bold;
+    color: @colorSecundaria;
+    background-color: @colorTerceria;
+    border-radius: 3px;
+}
+
+.aprovado {
+    background-color: @colorBtn;
+}
+
+.reprovado {
+    background-color: @colorReprovado;
+}
