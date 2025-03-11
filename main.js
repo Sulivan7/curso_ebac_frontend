@@ -1,33 +1,87 @@
-function Carro (marca, modelo, ano, valor) {
-    this.marca = marca;
-    this.modelo = modelo;
-    this.ano = ano;
-    this.valor = valor;
+function Veiculo (rodas, motor, combustivel) {
+    this.rodas = rodas;
+    this.motor = motor;
+    this.combustivel = combustivel;
+    this.ligar = function() {
+        console.log('O veículo ligou');
+    }
+    this.desligar = function() {
+        console.log('O veículo desligou');
+    }
 }
 
-const carroDoLucas = new Carro('Toyota', 'Corolla', 2025, 190000);
-const carroDoSulivan = new Carro('Fiat', 'Uno', 2010, 15000);
-const carroDaLaura = new Carro('Ford', 'Ka', 2015, 55000);
+function Carro (rodas, motor, combustivel, portas, janelas,) {
+    Veiculo.call(this, rodas, motor, combustivel);
+    this.portas = portas;
+    this.janelas = janelas;
+}
 
-function Pessoa(nome, idade, habilitacao) {
+function Hb20 (rodas, motor, combustivel, portas, janelas, marca, ano) {
+    Carro.call(this, rodas, motor, combustivel, portas, janelas);
+    this.marca = marca;
+    this.ano = ano;
+}
+
+const carroDaLaura = new Hb20(4, '1.6', 'gasolina', 4, 4, 'Hyundai', 2015);
+const carroDoJoao = new Hb20(4, '10', 'gasolina', 4, 4, 'Hyundai', 2018);
+
+function Moto (rodas, motor, combustivel, capacete,) {
+    Veiculo.call(this, rodas, motor, combustivel);
+    this.capacete = capacete;
+}
+
+function Biz (rodas, motor, combustivel, capacete, marca, ano) {
+    Moto.call(this, rodas, motor, combustivel, capacete);
+    this.marca = marca;
+    this.ano = ano;
+}
+
+const motoDoJoao = new Biz(2, '125cc', 'gasolina', 'fechado', 'Honda', 2018);
+const motoDaLarissa = new Biz(2, '125cc', 'gasolina', 'fechado', 'Honda', 2015);
+
+function Pessoa (nome, idade) {
     this.nome = nome;
     this.idade = idade;
-    this.habilitacao = habilitacao;
+    this.habilitacao = function() {
+        if (idade >= 18) {
+            console.log(`Legal ${this.nome} Você Tem Habilitação`);
+        }else {
+            console.log(`Que pena ${this.nome} Você não pode ter habilitação ainda`);
+        }
+    }
 }
 
-const lucas = new Pessoa('Lucas', 25, 'Não');
-const sulivan = new Pessoa('Sullivan', 30, 'AB');
-const laura = new Pessoa('Laura', 20, 'B');
+Object.freeze(Pessoa);
 
-function Cliente(nome, idade, habilitacao, carro) {
-    Pessoa.call(this, nome, idade, habilitacao);
-    Carro.call(this, carro.marca, carro.modelo, carro.ano, carro.valor);
+const laura = new Pessoa('Laura', 20);
+const joao = new Pessoa('João', 15);
+
+function Cliente (nome, idade, veiculoDoCliente) {
+    Pessoa.call(this, nome, idade);
+    this.veiculoDoCliente = veiculoDoCliente;
 }
 
-const clienteLucas = new Cliente(lucas.nome, lucas.idade, lucas.habilitacao, carroDoLucas);
-const clienteSulivan = new Cliente(sulivan.nome, sulivan.idade, sulivan.habilitacao, carroDoSulivan);
-const clienteLaura = new Cliente(laura.nome, laura.idade, laura.habilitacao, carroDaLaura);
+const clienteLaura = new Cliente(laura.nome, laura.idade, carroDaLaura);
+const clienteJoao = new Cliente(joao.nome, joao.idade, motoDoJoao);
+const clienteLarissa = new Cliente('Larissa', 18, motoDaLarissa);
+const clientePedro = new Cliente('Pedro', 17, carroDoJoao);
 
-console.log(clienteLucas);
-console.log(clienteSulivan);
 console.log(clienteLaura);
+carroDaLaura.ligar();
+carroDaLaura.desligar();
+clienteLaura.habilitacao();
+
+console.log(clienteJoao);
+motoDoJoao.ligar();
+motoDoJoao.desligar();
+clienteJoao.habilitacao();
+
+console.log(clienteLarissa);
+motoDaLarissa.ligar();
+motoDaLarissa.desligar();
+clienteLarissa.habilitacao();
+
+console.log(clientePedro);
+carroDoJoao.ligar();
+carroDoJoao.desligar();
+clientePedro.habilitacao();
