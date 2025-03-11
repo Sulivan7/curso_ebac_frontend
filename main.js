@@ -10,7 +10,7 @@ function Veiculo (rodas, motor, combustivel) {
     }
 }
 
-function Carro (rodas, motor, combustivel, portas, janelas,) {
+function Carro (rodas, motor, combustivel, portas, janelas) {
     Veiculo.call(this, rodas, motor, combustivel);
     this.portas = portas;
     this.janelas = janelas;
@@ -55,6 +55,8 @@ Object.freeze(Pessoa);
 
 const laura = new Pessoa('Laura', 20);
 const joao = new Pessoa('João', 15);
+const larissa = new Pessoa('Larissa', 18);
+const pedro = new Pessoa('Pedro', 17);
 
 function Cliente (nome, idade, veiculoDoCliente) {
     Pessoa.call(this, nome, idade);
