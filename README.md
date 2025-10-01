@@ -1,8 +1,42 @@
-﻿# curso_ebac_frontend
+﻿# 📝 Exercício HTML - Formulário de Cadastro
 
-## Os Exercícios estão organizados pelas branch.
+Formulário de cadastro desenvolvido como exercício prático de **HTML5** no curso EBAC Frontend. O projeto demonstra conceitos fundamentais de estruturação HTML semântica e formulários.
 
-### Exercício HTML - (Criar um arquivo HTML que contenha um formulário de cadastro, com os campos nome, e-mail e senha e a existência de um botão para realizar o cadastro)
+## 🎯 Objetivo do Exercício
 
-    - Adicionar também uma label para cada campo e referenciar essa label ao ID que será atribuído ao campo;
-    - Enviar esse arquivo para o Github em uma branch chamada exercício_html;
+Criar um arquivo HTML que contenha:
+
+- ✅ **Formulário de cadastro** completo
+- ✅ **Campos obrigatórios**: Nome, E-mail e Senha
+- ✅ **Labels associadas** com IDs dos campos
+- ✅ **Botão de cadastro** funcional
+- ✅ **Semântica HTML** adequada
+- ✅ **Acessibilidade** básica
+
+## 🛠️ Tecnologias Utilizadas
+
+- **HTML5**
+- **Form Elements**
+- **Semantic HTML**
+- **Accessibility**
+
+## 📁 Estrutura do Projeto
+
+```
+├── exercicio.html
+├── .gitignore
+└── README.md
+```
+
+## 🚀 Como Visualizar
+
+1. **Abra** o arquivo `exercicio.html` no navegador
+2. **Teste** o formulário:
+   - Digite informações nos campos
+   - Observe a validação automática do email
+   - Teste a acessibilidade clicando nas labels
+3. **Envie** o formulário (comportamento padrão do browser)
+
+---
+
+💡 Dica: Este é um dos exercícios do curso EBAC Frontend. Para ver outros exercícios, acesse as diferentes branches do repositório!
